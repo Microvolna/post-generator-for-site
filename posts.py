@@ -3,6 +3,7 @@ import random
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QVBoxLayout, QPushButton, QCheckBox, QTextEdit
 
+response = None
 rubricks_text = '"Полезные python библиотеки", "Полезные JavaScript библиотеки", "База python", "База JavaScript"'
 example = '''🔊🐍 Привет, друзья! Сегодня мы поговорим о одном интересном модуле для Python - gTTS (Google Text-to-Speech)!
 
@@ -29,6 +30,8 @@ example = '''🔊🐍 Привет, друзья! Сегодня мы погов
 '''
         
 class PostGenerator(QWidget):
+    global response
+
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Генератор постов")
@@ -38,8 +41,14 @@ class PostGenerator(QWidget):
         self.emoji_checkbox = QCheckBox("Использовать эмодзи")
         self.example_text = QTextEdit()
         self.unposting_text = QTextEdit()
-        self.rubricks = QTextEdit()        
-        
+        self.rubricks = QTextEdit()
+
+        if response == None:
+            resp = 'Здесь будут ваши посты'
+        else:
+            resp = response
+        self.respon = QTextEdit(resp)
+
         self.generate_button = QPushButton("Сгенерировать посты")
         self.generate_button.clicked.connect(self.generate_posts)
         
@@ -54,6 +63,7 @@ class PostGenerator(QWidget):
         layout.addWidget(QLabel("Введите рубрики для поста:"))
         layout.addWidget(self.rubricks)
         layout.addWidget(self.generate_button)
+        layout.addWidget(self.respon)
 
         self.setLayout(layout)
        
@@ -87,8 +97,8 @@ class PostGenerator(QWidget):
             response = g4f.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[{"role": "user", "content": prompt_1}],
+                provider=g4f.Provider.Aura,
                 max_tokens = 10,
-                stream=False,
             )
 
             print('Тема для поста:  '+response)
@@ -102,11 +112,12 @@ class PostGenerator(QWidget):
             # Получаем текст поста у ChatGPT
             response = g4f.ChatCompletion.create(
                 model="gpt-3.5-turbo",
+                provider=g4f.Provider.Aura,
                 messages=[{"role": "user", "content": prompt_2}],
-                stream=False,
             )
 
             print(response)
+
             print('')
 
 if __name__ == '__main__':
