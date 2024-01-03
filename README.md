@@ -1,8 +1,8 @@
 ## Язык/Language
 
-[`Русский`](https://github.com/Microvolna/post-generator-for-site/edit/main/README.md#генератор-постов)
+[`Русский`](https://github.com/Microvolna/post-generator-for-site#генератор-постов)
 
-[`English`](https://github.com/Microvolna/post-generator-for-site/edit/main/README.md#post-generator)
+[`English`](https://github.com/Microvolna/post-generator-for-site#post-generator)
 
 # Генератор постов 
 
