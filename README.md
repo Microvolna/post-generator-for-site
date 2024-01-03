@@ -18,6 +18,8 @@
 
 Позднее добавил пару мелких функций: использование эмодзи и пример поста (чтобы программа могла генерировать посты в вашей стилистике)
 
+Конечному потребителю будет не удобно пользоваться, поэтому сделал GUI на PyQt5.
+
 ## Последствия
 
 В итоге идея с тг каналом не дала быстрого прироста подписчиков.
@@ -39,6 +41,8 @@ At first, it was a simple console application for generating posts on the topic 
 I immediately noticed that the ideas and posts began to repeat themselves and added a list of used ideas.
 
 Later, I added a couple of small functions: the use of emojis and an example of a post (so that the program can generate posts in your style)
+
+It will not be convenient for the end user to use, so I made a GUI on PyQt5.
 
 ## Consequences
 
