@@ -8,17 +8,11 @@
 
 ## История
 
-Однажды в попытках создать чтиво для программистов и около программистов я создал тг канал. Написав пару постов, я понял, что у меня кончились идеи...
+Однажды, я создал телеграм канал для программистов. Написав пару постов, я понял, что у меня кончились идеи...
 
-В этот момент меня и посетила идея о создании генератора постов для тг канала (в названии сказано о сайтах потому что они более популярны, нежели тг)
-
-Сначала это было простое консольное приложение для генерации постов по теме поста. Затем я понял что моя голова не способна "генерировать" много идей для постов. Я решил сделать генерацию идей для постов по рубрике поста.
+В этот момент меня и посетила идея о создании генератора постов для канала (в названии сказано о сайтах потому что они более популярны, нежели тг)
 
 Сразу заметил что идеи и посты начали повторяться и добавил список использованных идей.
-
-Позднее добавил пару мелких функций: использование эмодзи и пример поста (чтобы программа могла генерировать посты в вашей стилистике)
-
-Конечному потребителю будет не удобно пользоваться, поэтому сделал GUI на PyQt5.
 
 ## Последствия
 
@@ -39,10 +33,6 @@ At that moment, I was visited by the idea of creating a post generator for the t
 At first, it was a simple console application for generating posts on the topic of the post. Then I realized that my head is not able to "generate" many ideas for posts. I decided to generate ideas for posts under the heading of the post.
 
 I immediately noticed that the ideas and posts began to repeat themselves and added a list of used ideas.
-
-Later, I added a couple of small functions: the use of emojis and an example of a post (so that the program can generate posts in your style)
-
-It will not be convenient for the end user to use, so I made a GUI on PyQt5.
 
 ## Consequences
 
